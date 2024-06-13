@@ -27,3 +27,4 @@ npm run dev
 ```sh
 npm run build
 ```
+<img src='/src/assets/logo.svg'>
