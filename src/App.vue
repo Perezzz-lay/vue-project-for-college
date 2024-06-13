@@ -1,10 +1,15 @@
-<script setup>
-import axios from 'axios';
-axios
+<script>
+export default {
+  data() {
+  	return {
+	    awesome: true
+  	}
+	}
+}
 </script>
 
 <template>
-<img src="/src/assets/logo.svg" alt="">
+
 </template>
 
 <style scoped>
