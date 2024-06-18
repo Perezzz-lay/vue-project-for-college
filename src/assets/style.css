@@ -1,144 +1,211 @@
 @font-face {
-    font-family: Font1;
-    src: url("/src/assets/Fonts/font1/KyivTypeTitling-Bold.otf");
-    font-size: 100%;
-    font-weight: 100;
+  font-family: Font1;
+  src: url("/src/assets/Fonts/font1/KyivTypeTitling-Bold.otf");
+  font-size: 100%;
+  font-weight: 100;
 }
 
 @font-face {
-    font-family: Font2;
-    src: url("/src/assets/Fonts/font2/JuraDemiBold.ttf");
-    font-size: 100%;
-    font-weight: 800;
+  font-family: Font2;
+  src: url("/src/assets/Fonts/font2/JuraDemiBold.ttf");
+  font-size: 100%;
+  font-weight: 800;
 }
 
 @font-face {
-    font-family: Font3;
-    src: url('/src/assets/Fonts/font1/KyivTypeTitling-Regular.otf');
-    font-size: 100%;
-    font-weight: 500;
+  font-family: Font3;
+  src: url("/src/assets/Fonts/font1/KyivTypeTitling-Regular.otf");
+  font-size: 100%;
+  font-weight: 500;
+}
+
+body {
+  background: linear-gradient(180deg, #ffffff, #e4e4e4, #b5b5b5, #b5b5b5);
 }
 
 header {
-    display: grid;
-    grid-template-columns: 15% 15% 40% 15% 15%;
+  display: grid;
+  grid-template-columns: 15% 15% 40% 15% 15%;
 
-    button {
-        background-color: black;
-        color: white;
-        width: 80%;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 50px;
-        text-align: center;
-        height: 35%;
-        font-family: Font2;
-        font-size: 115%;
-    }
+  button {
+    background-color: black;
+    color: white;
+    width: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    text-align: center;
+    height: 35%;
+    font-family: Font2;
+    font-size: 115%;
+  }
 }
 
 .block-start {
-    width: 100%;
-    height: 85vh;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 29px;
+  align-items: center;
+  margin-top: 5vh;
+
+  .texts {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 29px;
+    align-content: center;
+    justify-content: center;
     align-items: center;
-    margin-top: 5vh;
 
-    .texts {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-
-        .First {
-            font-size: 150px;
-            font-family: Font1;
-        }
-
-        .Third {
-            font-family: "Font1";
-            font-size: 66px;
-        }
+    .First {
+      font-size: 150px;
+      font-family: Font1;
     }
 
-    img {
-        width: 67%;
-        height: 430px;
-        border: 1px solid;
-        border-radius: 50px;
+    .Third {
+      font-family: "Font1";
+      font-size: 66px;
     }
+  }
+
+  img {
+    width: 67%;
+    height: 430px;
+    border: 1px solid;
+    border-radius: 50px;
+  }
 }
 
 hr {
-    color: black;
-    border: 3px solid;
-    opacity: 1;
+  color: black;
+  border: 3px solid;
+  opacity: 1;
 }
 
 .block-about {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 20px;
+
+  .about {
+    width: 80%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    align-content: center;
     align-items: center;
-    gap: 35px;
-    margin-bottom: 20px;
+    text-align: center;
 
-    .about {
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-content: center;
-        align-items: center;
-        text-align: center;
-
-        h1 {
-            font-family: Font1;
-            font-size: 60px;
-            margin-bottom: 23px;
-        }
-
-        h6 {
-            font-family: Font3;
-            font-size: 27px;
-            font-weight: 600;
-            white-space: break-spaces;
-            word-break: auto-phrase;
-            word-spacing: 5px;
-        }
+    h1 {
+      font-family: Font1;
+      font-size: 60px;
+      margin-bottom: 23px;
     }
+
+    h6 {
+      font-family: Font3;
+      font-size: 27px;
+      font-weight: 600;
+      white-space: break-spaces;
+      word-break: auto-phrase;
+      word-spacing: 5px;
+    }
+  }
 }
 
 .info-map {
-    width: 100%;
-    height: 90vh;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vh;
+
+  h1 {
+    font-family: Font1;
+    font-size: 60px;
+    margin-bottom: 23px;
+  }
+
+  .map {
+    width: 77%;
+    height: 65vh;
+    background: gray;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.telephons {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+  .more-tels {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
-    margin-top: 3vh;
+    width: 100%;
+    justify-content: space-around;
+    margin: 4vh 0;
 
-    h1 {
-        font-family: Font1;
-        font-size: 60px;
-        margin-bottom: 23px;
+    .telphone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+
+      h3 {
+        font-family: "Font1";
+        margin-bottom: 1.5vh;
+        font-size: 45px;
+      }
+
+      h4 {
+        font-family: "Font1";
+        margin-bottom: 1.5vh;
+        font-size: 38px;
+      }
     }
+  }
+}
 
-    .map {
-        width: 77%;
-        height: 65vh;
-        background: gray;
+footer {
+  background-color: #4a4a4a;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
 
-        iframe {
-            width: 100%;
-            height: 100%;
-        }
-    }
+  h5 {
+    margin: 0;
+    color: #ffffff52;
+    font-family: "Font3";
+    font-size: 30px;
+  }
+
+  h6 {
+    margin: 0;
+    color: #ffffff52;
+    font-family: "Font3";
+    font-size: 16px;
+    text-align: center;
+  }
 }
