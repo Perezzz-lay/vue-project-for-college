@@ -69,20 +69,20 @@ header {
     }
 
     img {
-        width: 80%;
+        width: 67%;
         height: 430px;
         border: 1px solid;
         border-radius: 50px;
     }
 }
 
-hr{
-        color: black;
-        border: 3px solid;
-        opacity: 1;
+hr {
+    color: black;
+    border: 3px solid;
+    opacity: 1;
 }
 
-.block-about{
+.block-about {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -90,7 +90,8 @@ hr{
     align-items: center;
     gap: 35px;
     margin-bottom: 20px;
-    .about{
+
+    .about {
         width: 80%;
         display: flex;
         flex-direction: column;
@@ -98,18 +99,46 @@ hr{
         align-content: center;
         align-items: center;
         text-align: center;
-        h1{
+
+        h1 {
             font-family: Font1;
             font-size: 60px;
             margin-bottom: 23px;
         }
-        h6{
+
+        h6 {
             font-family: Font3;
             font-size: 27px;
             font-weight: 600;
             white-space: break-spaces;
             word-break: auto-phrase;
             word-spacing: 5px;
+        }
+    }
+}
+
+.info-map {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vh;
+
+    h1 {
+        font-family: Font1;
+        font-size: 60px;
+        margin-bottom: 23px;
+    }
+
+    .map {
+        width: 77%;
+        height: 65vh;
+        background: gray;
+
+        iframe {
+            width: 100%;
+            height: 100%;
         }
     }
 }
