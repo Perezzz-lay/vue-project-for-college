@@ -10,20 +10,7 @@ export default {
 	methods: {}
 };
 </script>
-<script setup>
-let map;
 
-async function initMap() {
-	const { Map } = await google.maps.importLibrary("maps");
-
-	map = new Map(document.getElementById("map"), {
-		center: { lat: -34.397, lng: 150.644 },
-		zoom: 8
-	});
-}
-
-initMap();
-</script>
 <template v-if="page == true">
 	<header v-if="heads == true">
 		<div class="but-block">
