@@ -12,6 +12,13 @@
     font-weight: 800;
 }
 
+@font-face {
+    font-family: Font3;
+    src: url('/src/assets/Fonts/font1/KyivTypeTitling-Regular.otf');
+    font-size: 100%;
+    font-weight: 500;
+}
+
 header {
     display: grid;
     grid-template-columns: 15% 15% 40% 15% 15%;
@@ -70,5 +77,39 @@ header {
 }
 
 hr{
-    
+        color: black;
+        border: 3px solid;
+        opacity: 1;
+}
+
+.block-about{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 20px;
+    .about{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        h1{
+            font-family: Font1;
+            font-size: 60px;
+            margin-bottom: 23px;
+        }
+        h6{
+            font-family: Font3;
+            font-size: 27px;
+            font-weight: 600;
+            white-space: break-spaces;
+            word-break: auto-phrase;
+            word-spacing: 5px;
+        }
+    }
 }
