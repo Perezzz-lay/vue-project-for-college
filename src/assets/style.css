@@ -1,12 +1,74 @@
 @font-face {
-    font-family: Forn1;
-    src: url();
+    font-family: Font1;
+    src: url("/src/assets/Fonts/font1/KyivTypeTitling-Bold.otf");
+    font-size: 100%;
+    font-weight: 100;
 }
-header{
+
+@font-face {
+    font-family: Font2;
+    src: url("/src/assets/Fonts/font2/JuraDemiBold.ttf");
+    font-size: 100%;
+    font-weight: 800;
+}
+
+header {
     display: grid;
     grid-template-columns: 15% 15% 40% 15% 15%;
-    button{
+
+    button {
         background-color: black;
         color: white;
+        width: 80%;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50px;
+        text-align: center;
+        height: 35%;
+        font-family: Font2;
+        font-size: 115%;
     }
+}
+
+.block-start {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 29px;
+    align-items: center;
+    margin-top: 5vh;
+
+    .texts {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+        .First {
+            font-size: 150px;
+            font-family: Font1;
+        }
+
+        .Third {
+            font-family: "Font1";
+            font-size: 66px;
+        }
+    }
+
+    img {
+        width: 80%;
+        height: 430px;
+        border: 1px solid;
+        border-radius: 50px;
+    }
+}
+
+hr{
+    
 }
