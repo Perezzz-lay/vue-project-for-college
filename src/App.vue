@@ -1,4 +1,6 @@
 <script>
+import Typed from 'typed.js';
+
 export default {
 	data() {
 		return {
@@ -7,7 +9,20 @@ export default {
 			heads: true
 		};
 	},
-	methods: {}
+	methods: {
+	},
+	mounted(){
+		this.typed = new Typed('.Third', {
+         strings: ['','Технологии, которые работают'],
+         typeSpeed: 80,
+      });
+
+		this.typed = new Typed('.First', {
+         strings: ['','АлгaРитм',],
+         typeSpeed: 80,
+      });
+		
+	}
 };
 </script>
 
@@ -91,6 +106,9 @@ export default {
 		</div>
 	</div>
 	<footer>
+		<vue-typed-js :strings="['First text', 'Second Text']">
+  <h1 class="typing"></h1>
+</vue-typed-js>
 		<h5>ООО <ИнфоСофтСервис>
 		</h5>
 		<h6>© 2024 Все права защищены. Использование материалов сайта без согласия его авторов и активной ссылки на сайт

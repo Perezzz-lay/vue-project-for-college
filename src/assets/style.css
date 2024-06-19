@@ -209,3 +209,9 @@ footer {
     text-align: center;
   }
 }
+.typed-cursor.typed-cursor--blink{
+  display: none;
+}
+.typed-cursor{
+  display: none;
+}
