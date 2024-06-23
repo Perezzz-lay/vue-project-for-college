@@ -10,6 +10,14 @@ export default {
 		};
 	},
 	methods: {
+	checced(){
+		if(document.querySelector('input').checked){
+			document.querySelector('.block-of-menu').style = 'display:flex;'
+		}
+		else{
+			document.querySelector('.block-of-menu').style = 'display:none;'
+		}
+	}
 	},
 	mounted(){
 		this.typed = new Typed('.Third', {
@@ -21,27 +29,43 @@ export default {
          strings: ['','АлгaРитм',],
          typeSpeed: 80,
       });
-		
+
 	}
 };
 </script>
 
 <template v-if="page == true">
-	<header v-if="heads == true">
-		<div class="but-block">
-			<button>О нас</button>
-		</div>
-		<div class="but-block">
-			<button>Где мы</button>
-		</div>
-		<img src="/src/assets/logo.svg" alt="" width="100%;" height="100px" />
-		<div class="but-block">
-			<button>Связь с нами</button>
-		</div>
+<div class="block-of-menu">
+	<div class="rigth">
+		<img src="/src/assets/logo.svg" alt="">
 		<div class="but-block">
 			<button>Наше ПО</button>
 		</div>
+</div>
+</div>
+	<header v-if="heads == true">
+			<div class="but-block">
+			<a href="#first"><button>О нас</button></a>
+		</div>
+		<div class="but-block">
+			<a href="#second"><button>Где мы</button></a>
+		</div>
+		<div style=" height: 100px"></div>
+		<div class="but-block">
+			<a href="#third"><button>Связь с нами</button></a>
+		</div>
+		<div class="but-block">
+			<a href=""><button>Наше ПО</button></a>
+		</div>
 	</header>
+	<div class="hams-line">
+		<div class="hamburger">
+		<input type="checkbox" name="" id="" @click="checced">
+		<div class="ham-line">&nbsp;</div>
+		<div class="ham-line">&nbsp;</div>
+		<div class="ham-line">&nbsp;</div>
+	</div>
+	</div>
 	<div class="block-start">
 		<div class="texts">
 			<h1 class="First">АлгаРитм</h1>
@@ -50,7 +74,7 @@ export default {
 		<img src="/src/assets/ноуты1.jpg" alt="ноутбуки" />
 	</div>
 	<hr />
-	<div class="block-about">
+	<div class="block-about" id="first">
 		<div class="about">
 			<h1>Кто мы?</h1>
 			<h6>
@@ -77,7 +101,7 @@ export default {
 		</div>
 	</div>
 	<hr />
-	<div class="info-map">
+	<div class="info-map" id="second">
 		<h1>Где нас найти?</h1>
 		<br />
 		<div class="map" id="map">
@@ -88,27 +112,24 @@ export default {
 		</div>
 	</div>
 	<hr>
-	<div class="telephons">
+	<div class="telephons" id="third" >
 		<h1>Связаться с нами</h1>
 		<div class="more-tels">
 			<div class="telphone">
 				<h3>Телефон 1</h3>
-				<h4>+899999999</h4>
+				<h4>+7 (999) 999-99-99</h4>
 			</div>
 			<div class="telphone">
 				<h3>Телефон 1</h3>
-				<h4>+899999999</h4>
+				<h4>+7 (999) 999-99-99</h4>
 			</div>
 			<div class="telphone">
 				<h3>Телефон 1</h3>
-				<h4>+899999999</h4>
+				<h4>+7 (999) 999-99-99</h4>
 			</div>
 		</div>
 	</div>
 	<footer>
-		<vue-typed-js :strings="['First text', 'Second Text']">
-  <h1 class="typing"></h1>
-</vue-typed-js>
 		<h5>ООО <ИнфоСофтСервис>
 		</h5>
 		<h6>© 2024 Все права защищены. Использование материалов сайта без согласия его авторов и активной ссылки на сайт
@@ -117,5 +138,7 @@ export default {
 </template>
 
 <style>
+
 @import url("/src/assets/style.css");
+@import url('/src/assets/media.css');
 </style>

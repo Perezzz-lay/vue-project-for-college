@@ -18,9 +18,23 @@
   font-size: 100%;
   font-weight: 500;
 }
+@font-face {
+  font-family: Font4;
+  src: url("/src/assets/Fonts/font1/KyivTypeTitling-Regular3.otf");
+  font-size: 100%;
+  font-weight: 500;
+}
+@font-face {
+  font-family: Font5;
+  src: url("/src/assets/Fonts/font1/KyivTypeTitling-Medium3.otf");
+  font-size: 100%;
+  font-weight: 500;
+}
 
 body {
-  background: linear-gradient(180deg, #ffffff, #e4e4e4, #b5b5b5, #b5b5b5);
+  background: linear-gradient(to bottom, #fc3df4, #788dff, #00adff, #00b9e1, #64bab5);
+  min-width: 300px;
+  max-width: 2000px;
 }
 
 header {
@@ -60,6 +74,8 @@ header {
     align-content: center;
     justify-content: center;
     align-items: center;
+    height: 300px;
+    width: 100%;
 
     .First {
       font-size: 150px;
@@ -111,7 +127,7 @@ hr {
     }
 
     h6 {
-      font-family: Font3;
+      font-family: Font5;
       font-size: 27px;
       font-weight: 600;
       white-space: break-spaces;
@@ -177,7 +193,7 @@ hr {
       }
 
       h4 {
-        font-family: "Font1";
+        font-family: "Font4";
         margin-bottom: 1.5vh;
         font-size: 38px;
       }
@@ -215,3 +231,6 @@ footer {
 .typed-cursor{
   display: none;
 }
+.hamburger{display: none;}
+    input{display: none;}
+    .block-of-menu{display: none;}
