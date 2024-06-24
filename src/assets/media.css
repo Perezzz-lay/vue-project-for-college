@@ -386,6 +386,18 @@
           text-align: center;
         }
       }
+      .page-two{
+        .head{
+          height: 75px;
+        }
+        .block-search{
+          .block-of-text{
+            h1{
+              font-size: 225%;
+            }
+          }
+        }
+      }
 }
 @media (max-width: 700px) {
     .block-of-menu{
@@ -645,4 +657,88 @@
           text-align: center;
         }
       }
+}
+@media (max-width: 600px){
+  .cards-of-softs{
+    width: 100%;
+      display: grid;
+      align-content: center;
+      align-items: center;
+      grid-template-columns: repeat(auto-fill, 200px);
+      justify-content: center;
+      gap: 30px;
+  }
+  .page-two {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  
+    .head {
+      background: #000000b3;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: flex-end;
+      align-items: center;
+      justify-content: space-around;
+  
+      h1 {
+        color: white;
+        font-family: Font1;
+        font-size: 360%;
+      }
+  
+      h3 {
+        color: white;
+        font-family: Font1;
+        display: none;
+      }
+    }
+  
+    .block-search {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3vh;
+  
+      .block-of-text {
+        margin-bottom: 2vh;
+  
+        h1 {
+          text-align: center;
+          font-family: 'Font1';
+          font-size: 220%;
+        }
+      }
+  
+      .search {
+        margin-top: 8vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        svg{
+          width: 100px;
+          height: 55px;
+        }
+        input {
+          width: 100%;
+          height: 6vh;
+          border: 4px solid;
+          border-radius: 60px;
+          padding: 0 20px 0 15px;
+          font-family: 'Font3';
+          font-size: 150%;
+        }
+      }
+  
+    }
+  }
+  
 }

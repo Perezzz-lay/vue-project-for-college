@@ -44,7 +44,7 @@ export default {
 			<div class="rigth">
 				<img src="/src/assets/logo.svg" alt="">
 				<div class="but-block">
-					<button>Наше ПО</button>
+					<button @click="page = false">Наше ПО</button>
 				</div>
 			</div>
 		</div>
@@ -73,7 +73,7 @@ export default {
 		</div>
 		<div class="block-start">
 			<div class="texts">
-				<h1 class="First" @click="setpage()">АлгаРитм</h1>
+				<h1 class="First">АлгаРитм</h1>
 				<h3 class="Third">Технологии, которые работают</h3>
 			</div>
 			<img src="/src/assets/ноуты1.jpg" alt="ноутбуки" />
@@ -174,10 +174,51 @@ export default {
 		</div>
 		<hr>
 		<div class="cards-of-softs">
-			<OneCard></OneCard>
-			<OneCard></OneCard>
-			<OneCard></OneCard>
-			<OneCard></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name ="Soft 1" count = 123></OneCard>
 		</div>
 	</div>
 </template>
