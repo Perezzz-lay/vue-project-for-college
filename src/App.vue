@@ -1,61 +1,64 @@
 <script>
-import Typed from 'typed.js';
-import OneCard from './components/OneCard.vue'
+import Typed from "typed.js";
+import OneCard from "./components/OneCard.vue";
 export default {
-	components:{OneCard},
+	components: { OneCard },
 	data() {
 		return {
 			awesome: true,
-			page: true,
+			page: false,
 			heads: true,
-			tel: "index"
+			tel: "index",
+			turn: 1
 		};
 	},
 	methods: {
 		checced() {
-			if (document.querySelector('input').checked) {
-				document.querySelector('.block-of-menu').style = 'display:flex;'
-			}
-			else {
-				document.querySelector('.block-of-menu').style = 'display:none;'
+			if (document.querySelector("input").checked) {
+				document.querySelector(".block-of-menu").style = "display:flex;";
+			} else {
+				document.querySelector(".block-of-menu").style = "display:none;";
 			}
 		},
-		setpage(){
-			document.querySelector('.first-page').classList.add('scale-up-hor-left')
+		setpage() {
+			document.querySelector(".first-page").classList.add("scale-up-hor-left");
+		},
+		close(){
+			document.querySelector('dialog').close()
 		}
 	},
 	mounted() {
-		this.typed = new Typed('.Third', {
-			strings: ['', 'Технологии, которые работают'],
-			typeSpeed: 80,
+		this.typed = new Typed(".Third", {
+			strings: ["", "Технологии, которые работают"],
+			typeSpeed: 80
 		});
 
-		this.typed = new Typed('.First', {
-			strings: ['', 'АлгaРитм',],
-			typeSpeed: 80,
+		this.typed = new Typed(".First", {
+			strings: ["", "АлгaРитм"],
+			typeSpeed: 80
 		});
 	}
 };
 </script>
 
 <template>
-	<div class="first-page"  v-if="page == true" >
+	<div class="first-page" v-if="page == true">
 		<div class="block-of-menu">
 			<div class="rigth">
-				<img src="/src/assets/logo.svg" alt="">
+				<img src="/src/assets/logo.svg" alt="" />
 				<div class="but-block">
 					<button @click="page = false">Наше ПО</button>
 				</div>
 			</div>
 		</div>
-		<header  v-if="heads == true">
+		<header v-if="heads == true">
 			<div class="but-block">
 				<a href="#first"><button>О нас</button></a>
 			</div>
 			<div class="but-block">
 				<a href="#second"><button>Где мы</button></a>
 			</div>
-			<div style=" height: 100px"></div>
+			<div style="height: 100px"></div>
 			<div class="but-block">
 				<a href="#third"><button>Связь с нами</button></a>
 			</div>
@@ -65,7 +68,7 @@ export default {
 		</header>
 		<div class="hams-line">
 			<div class="hamburger">
-				<input type="checkbox" name="" id="chekbox" @click="checced">
+				<input type="checkbox" name="" id="chekbox" @click="checced" />
 				<div class="ham-line">&nbsp;</div>
 				<div class="ham-line">&nbsp;</div>
 				<div class="ham-line">&nbsp;</div>
@@ -83,25 +86,28 @@ export default {
 			<div class="about">
 				<h1>Кто мы?</h1>
 				<h6>
-					А также стремящиеся вытеснить традиционное производство, нанотехнологии
-					преданы социально-демократической анафеме. Разнообразный и богатый опыт
-					говорит нам, что постоянное информационно-пропагандистское.
+					А также стремящиеся вытеснить традиционное производство,
+					нанотехнологии преданы социально-демократической анафеме.
+					Разнообразный и богатый опыт говорит нам, что постоянное
+					информационно-пропагандистское.
 				</h6>
 			</div>
 			<div class="about">
 				<h1>Кто мы?</h1>
 				<h6>
-					А также стремящиеся вытеснить традиционное производство, нанотехнологии
-					преданы социально-демократической анафеме. Разнообразный и богатый опыт
-					говорит нам, что постоянное информационно-пропагандистское.
+					А также стремящиеся вытеснить традиционное производство,
+					нанотехнологии преданы социально-демократической анафеме.
+					Разнообразный и богатый опыт говорит нам, что постоянное
+					информационно-пропагандистское.
 				</h6>
 			</div>
 			<div class="about">
 				<h1>Кто мы?</h1>
 				<h6>
-					А также стремящиеся вытеснить традиционное производство, нанотехнологии
-					преданы социально-демократической анафеме. Разнообразный и богатый опыт
-					говорит нам, что постоянное информационно-пропагандистское.
+					А также стремящиеся вытеснить традиционное производство,
+					нанотехнологии преданы социально-демократической анафеме.
+					Разнообразный и богатый опыт говорит нам, что постоянное
+					информационно-пропагандистское.
 				</h6>
 			</div>
 		</div>
@@ -116,7 +122,7 @@ export default {
 				</iframe>
 			</div>
 		</div>
-		<hr>
+		<hr />
 		<div class="telephons" id="third">
 			<h1>Связаться с нами</h1>
 			<div class="more-tels">
@@ -137,25 +143,84 @@ export default {
 		<footer>
 			<h5>ООО <ИнфоСофтСервис>
 			</h5>
-			<h6>© 2024 Все права защищены. Использование материалов сайта без согласия его авторов и активной ссылки на
-				сайт
-				– запрещено.</h6>
+			<h6>
+				© 2024 Все права защищены. Использование материалов сайта без согласия
+				его авторов и активной ссылки на сайт – запрещено.
+			</h6>
 		</footer>
 	</div>
 
 	<div class="page-two scale-up-top" v-else @click="setpage()">
+		<dialog>
+			<div class="head">
+				<h1 @click="page = true">АлгаРитм</h1>
+				<h3>Технологии, которые работают</h3>
+			</div>
+			<div class="navigation">
+				<div class="close">
+					<img src="https://cdn-icons-png.flaticon.com/512/17/17047.png" alt="" width="50px" @click="close()">
+				</div>
+				<div class="about-card">
+					<img src="/src/assets/network-svgrepo-com.svg" alt="" />
+					<div class="card-info">
+						<div class="opis">
+							<h1 class="name">Name</h1>
+							<hr />
+							<div class="card-rating">
+								<div class="stars">
+									<img src="/src/assets/star-svgrepo-com.svg" alt="" width="20px" />
+									<img src="/src/assets/star-svgrepo-com.svg" alt="" width="20px" />
+									<img src="/src/assets/star-svgrepo-com.svg" alt="" width="20px" />
+									<img src="/src/assets/star-svgrepo-com.svg" alt="" width="20px" />
+									<img src="/src/assets/star-svgrepo-com.svg" alt="" width="20px" />
+								</div>
+							</div>
+							<hr />
+							<h2 class="cost">9.99$ /m</h2>
+							<hr />
+							<h2>30 day trial</h2>
+							<hr />
+						</div>
+						<div class="butts">
+							<button>Скачать</button>
+							<h5>Проблемы с установкой?</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="buttons-of-navigate">
+				<button @click="turn = 1">Описание</button>
+				<button @click="turn = 2">FAQ</button>
+				<button @click="turn = 3">Отзывы</button>
+			</div>
+			<hr style="margin: 0;">
+			<div class="block-change">
+				<div v-if="turn == 1" class="block-first">
+				<p>Безусловно, базовый вектор развития играет важную роль в формировании соответствующих условий активизации.</p>
+				<img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/201305/20130514110054-1_0_0.jpg?itok=J8bRetuU" alt="">
+				<p>Как уже неоднократно упомянуто, ключевые особенности структуры проекта и по сей день остаются уделом либералов, которые жаждут быть объявлены нарушающими общечеловеческие нормы этики и морали. В частности, высококачественный прототип будущего проекта играет важную роль в формировании экспериментов, поражающих по своей масштабности и грандиозности. Кстати,  акционеры крупнейших компаний могут быть заблокированы в рамках своих собственных рациональных ограничений. 
+					<br>
+					И нет сомнений, что действия представителей оппозиции являются только методом политического участия и рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. Разнообразный и богатый опыт говорит нам, что реализация намеченных плановых заданий требует определения и уточнения направлений прогрессивного развития! В своём стремлении повысить качество жизни, они забывают, что новая модель организационной деятельности способствует подготовке и реализации поэтапного и последовательного развития общества.
+				</p>
+				</div>
+
+				<div v-if="turn == 2" class="block-second">
+					<div class="block-quote">
+						<p>Если возникли вопросы, посетите страницу приложения у <label style="color: #725BFF ; text-decoration: underline;">разработчикаm</label> или обратитесь к <label style="color: #725BFF ; text-decoration: underline;">администраторам</label></p>
+					</div>
+				</div>
+			</div>
+		</dialog>
 		<div class="head">
 			<h1 @click="page = true">АлгаРитм</h1>
 			<h3>Технологии, которые работают</h3>
 		</div>
 		<div class="block-search">
 			<div class="block-of-text">
-				<h1>
-					Наше  предоставляемое <br>Програмное обеспечение
-				</h1>
+				<h1>Наше предоставляемое <br />Програмное обеспечение</h1>
 			</div>
 			<div class="search">
-				<input type="text">
+				<input type="text" />
 
 				<svg width="90" height="85" viewBox="0 0 90 85" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g clip-path="url(#clip0_29_230)">
@@ -169,61 +234,60 @@ export default {
 						</clipPath>
 					</defs>
 				</svg>
-
 			</div>
 		</div>
-		<hr>
+		<hr />
 		<div class="cards-of-softs">
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
-			<OneCard name ="Soft 1" count = 123></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
+			<OneCard name="Soft" count="123"></OneCard>
 		</div>
 	</div>
 </template>
 
 <style>
 @import url("/src/assets/style.css");
-@import url('/src/assets/media.css');
+@import url("/src/assets/media.css");
 </style>

@@ -7,6 +7,11 @@ props:{
     count:{
         type: Number
     }
+},
+methods:{
+    foo(){
+        document.querySelector('dialog').show()
+    }
 }
 }
 </script>
@@ -19,7 +24,7 @@ props:{
     </div>
     <div class="downloads">
         <img src='' alt="">
-        <h5>{{count}}</h5>
+        <h5>Скачиваний: {{count}}</h5>
     </div>
     <div class="rating">
         <div class="stars">
@@ -29,7 +34,7 @@ props:{
             <img src="/src/assets/star-svgrepo-com.svg" alt="" width="20px">
             <img src="/src/assets/star-svgrepo-com.svg" alt="" width="20px">
         </div>
-        <button>Подробнее</button>
+        <button @click="foo()">Подробнее</button>
     </div>
 </div>
 </template>
@@ -44,6 +49,16 @@ props:{
     align-content: flex-start;
     justify-content: center;
     align-items: center;
+}
+h1{
+        text-align: center;
+}
+.downloads{
+    width: 100%;
+    h5{
+        text-align: end;
+        margin-right: 1vw;
+    }
 }
 .card:hover{
     -webkit-animation: scale-down-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
