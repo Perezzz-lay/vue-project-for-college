@@ -6,7 +6,7 @@ export default {
 	data() {
 		return {
 			awesome: true,
-			page: false,
+			page: true,
 			heads: true,
 			tel: "index",
 			turn: 1
